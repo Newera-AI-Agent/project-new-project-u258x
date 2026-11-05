@@ -1,13 +1,13 @@
 {
   "code": "66bam7fge83b",
-  "jobId": "vm-mw3t4djy-2vaycc7v",
-  "relayIndex": 1,
+  "jobId": "vm-mw40z057-vlptczcx",
+  "relayIndex": 2,
   "maxMinutes": 240,
   "state": "running",
-  "step": 129,
-  "minutesLeft": 18,
+  "step": 3,
+  "minutesLeft": 232,
   "todoOpen": 7,
-  "updatedAt": "2026-11-05T20:52:12.484Z",
+  "updatedAt": "2026-11-05T20:58:00.665Z",
   "byok": {
     "active": false,
     "source": "admin",
