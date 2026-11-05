@@ -1,3 +1,7 @@
+# RELAY HANDOFF — job vm-mw3t4djy-2vaycc7v (VM 2 of 3)
+Written at the 15-minute checkpoint with 14 min left, after 131 steps.
+
+## Original task
 # RELAY HANDOFF — job vm-mw3la8to-zxar2ffr (VM 1 of 3)
 Written at the 15-minute checkpoint with 15 min left, after 490 steps.
 
@@ -122,6 +126,69 @@ e0f5682 cloud status: step 457
 6. [ ] Write issue1.md and issue2.md to repo (req issue-md-files)
 7. [ ] Maintain worklog (req worklog)
 1/7 steps done
+
+## Contract status
+(no task contract on this job)
+
+## Loaded skills (cyber ledger — re-load if your context lost them)
+(no skills loaded)
+
+## What the next VM must do
+1. Check the repo state above — everything committed so far is real and on disk.
+2. Do NOT redo finished work. Verify what exists (build, tests) before touching anything.
+3. Continue the ORIGINAL task to completion, then finish with an honest summary.
+4. If a deploy was requested and the build is green, make sure request_deploy was called (see .newera/vm/deploy-request.json).
+
+## Progress so far
+(no rolling summary was generated — reconstruct state from the git log below and the repo itself)
+
+## Worklog (latest lines — every VM in this chain appended)
+# VM Agent Worklog
+Durable session memory for this VM job chain. Each line is one step or wind-down from one VM. Read it on boot; never delete it.
+- [2026-11-05T13:36:57.955Z | VM 1/3] boot: VM 1/3 online (job vm-mw3la8to-zxar2ffr, 240 min budget)
+- [2026-11-05T13:36:57.956Z | VM 1/3] self-check PASS: shell: VERIFIED (the harness executed bash on this VM at boot); node: v24.22.2; npm: 11.19.1; python3: Python 3.12.3; git: repo checked out @ c81e871; browser: Google Chrome 156.0.8078.79 available — the browser_* tools drive it (playwright-core installs on first browser call); filesystem: WRITABLE 
+- [2026-11-05T14:15:32.311Z | VM 1/3] PLAN updated: 7 steps
+- [2026-11-05T17:15:54.807Z | VM 1/3] RELAY checkpoint at step 490 — handoff committed, VM 2 continues.
+- [2026-11-05T17:16:11.563Z | VM 2/3] boot: VM 2/3 online (job vm-mw3t4djy-2vaycc7v, 240 min budget, relay continuation)
+- [2026-11-05T17:16:11.564Z | VM 2/3] self-check PASS: shell: VERIFIED (the harness executed bash on this VM at boot); node: v24.22.2; npm: 11.19.1; python3: Python 3.12.3; git: repo checked out @ e128fd9; browser: Google Chrome 156.0.8078.79 available — the browser_* tools drive it (playwright-core installs on first browser call); filesystem: WRITABLE 
+- [2026-11-05T17:20:38.519Z | VM 2/3] PLAN updated: 7 steps
+- [2026-11-05T17:33:02.470Z | VM 2/3] PLAN updated: 7 steps
+- [2026-11-05T17:58:38.790Z | VM 2/3] PLAN updated: 7 steps
+- [2026-11-05T18:11:17.300Z | VM 2/3] VERIFIED green: cd /home/runner/work/project-new-project-u258x/project-new-project-u258x/.work/pollinations && echo '=== repo tree (2 levels, no node_modules) ===' && ls -1 && 
+- [2026-11-05T18:17:50.949Z | VM 2/3] PLAN updated: 7 steps
+- [2026-11-05T19:21:41.058Z | VM 2/3] PLAN updated: 7 steps
+
+## Repository state
+Changed/added files:
+(clean tree)
+
+Recent commits:
+2d8cad8 cloud status: step 129
+f9fc92f cloud status: step 129
+54ec395 cloud status: step 128
+ab2fdb2 cloud status: step 127
+40a44d2 cloud status: step 126
+fc70f03 cloud status: step 125
+29cbbd2 cloud status: step 125
+1de51a2 cloud status: step 124
+4e817f3 cloud status: step 123
+9145c8c cloud status: step 123
+1f0b709 cloud status: step 122
+822d5c4 cloud status: step 122
+61c07c8 cloud status: step 122
+098e717 cloud status: step 122
+28bf714 cloud status: step 120
+
+## Current plan (todo state)
+## CURRENT PLAN (7 steps)
+1. [~] Verify issue1 code claims: media worker rate-limit placement (GET /:id, GET /:id/metadata  (req code-verify-1)  <- NOW
+2. [ ] Verify issue2 code claims: gen worker edgeRateLimit placement (scoped to /account/* and pr (req code-verify-2)
+3. [ ] Run small-scale, non-destructive A/B PoCs against production: rate-limited vs unprotected  (req poc-verify)
+4. [ ] Wave 2 hunt for stronger critical bugs (auth bypass on /internal/generation, anonymous gen (req find-critical-bugs)
+5. [ ] Rewrite issue1.md and issue2.md with verbatim code, exact PoC output, honest severity and  (req issue-md-files)
+6. [ ] Add runnable PoC scripts + node --test regression tests so the repo builds/tests green (req local-tests)
+7. [ ] Maintain .newera/vm/WORKLOG.md with every step (req worklog)
+0/7 steps done
 
 ## Contract status
 (no task contract on this job)
