@@ -1,12 +1,16 @@
 {
+  "authorization": "User explicitly requested an authorized ethical red-team assessment of the public pollinations platform (github.com/pollinations/pollinations). Read-only testing only. Strictly no destructive actions, no state-changing writes, no sustained load.",
   "targets": [
-    "https://pollinations.ai",
-    "https://api.pollinations.ai",
-    "https://generate.pollinations.ai",
-    "https://openai.pollinations.ai",
-    "https://image.pollinations.ai",
-    "github.com/pollinations/pollinations"
+    "media.pollinations.ai",
+    "gen.pollinations.ai",
+    "enter.pollinations.ai",
+    "pollinations.ai"
   ],
-  "authorization": "ethical red-team audit with permission to reproduce in isolation; no live fire against production",
-  "rules": ["verify in isolated environment only", "no destructive testing", "document all findings for disclosure"]
+  "constraints": [
+    "NO fuzzing, NO sustained flooding, NO state-changing requests (no POST/PUT/DELETE against production), no exploitation of live vulnerabilities.",
+    "PoC load tests capped at <=300 concurrent requests and <=20 seconds, GET/HEAD only, against non-sensitive public endpoints.",
+    "No credential use, no brute force, no third-party targets.",
+    "All destructive PoC runs must happen against a local Miniflare/wrangler dev environment, never production."
+  ],
+  "date": "2026-11-05"
 }
