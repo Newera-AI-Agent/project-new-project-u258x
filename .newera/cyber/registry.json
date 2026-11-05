@@ -1,0 +1,116 @@
+{
+  "sources": [
+    {
+      "id": "rea",
+      "kind": "npm",
+      "label": "REA — Reverse Engineer Anything",
+      "license": {
+        "name": "MIT",
+        "file": "LICENSE"
+      },
+      "capabilities": [
+        "knowledge",
+        "engine-cli"
+      ]
+    },
+    {
+      "id": "pat",
+      "kind": "git-repo",
+      "repo": "swisskyrepo/PayloadsAllTheThings",
+      "ref": "master",
+      "label": "PayloadsAllTheThings",
+      "license": {
+        "name": "MIT",
+        "file": "LICENSE.md"
+      },
+      "capabilities": [
+        "knowledge",
+        "wordlists"
+      ]
+    },
+    {
+      "id": "nuclei",
+      "kind": "git-repo",
+      "repo": "projectdiscovery/nuclei-templates",
+      "ref": "main",
+      "label": "nuclei-templates",
+      "license": {
+        "name": "MIT",
+        "file": "LICENSE"
+      },
+      "capabilities": [
+        "templates",
+        "knowledge",
+        "engine-cli"
+      ]
+    },
+    {
+      "id": "seclists",
+      "kind": "git-repo",
+      "repo": "danielmiessler/SecLists",
+      "ref": "master",
+      "label": "SecLists",
+      "license": {
+        "name": "MIT",
+        "file": "LICENSE"
+      },
+      "capabilities": [
+        "wordlist-index",
+        "knowledge"
+      ]
+    },
+    {
+      "id": "gtfobins",
+      "kind": "git-repo",
+      "repo": "GTFOBins/gtfobins.github.io",
+      "ref": "master",
+      "label": "GTFOBins",
+      "license": {
+        "name": "GPL-3.0",
+        "file": "LICENSE"
+      },
+      "capabilities": [
+        "knowledge",
+        "docs"
+      ],
+      "path": "_includes/gtfobins",
+      "ext": [
+        ".md"
+      ]
+    },
+    {
+      "id": "lolbas",
+      "kind": "git-repo",
+      "repo": "LOLBAS-Project/LOLBAS",
+      "ref": "master",
+      "label": "LOLBAS",
+      "license": {
+        "name": "GPL-3.0",
+        "file": "LICENSE"
+      },
+      "capabilities": [
+        "knowledge",
+        "docs"
+      ],
+      "path": "yml",
+      "ext": [
+        ".yml"
+      ]
+    },
+    {
+      "id": "hacktricks",
+      "kind": "git-repo",
+      "repo": "HackTricks-wiki/hacktricks",
+      "ref": "master",
+      "label": "HackTricks",
+      "license": {
+        "name": "CC-BY-NC-4.0 (all rights reserved unless otherwise specified",
+        "file": "LICENSE.md"
+      },
+      "capabilities": [
+        "knowledge",
+        "docs"
+      ]
+    }
+  ]
+}

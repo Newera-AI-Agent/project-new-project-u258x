@@ -1,0 +1,12 @@
+{
+  "targets": [
+    "https://pollinations.ai",
+    "https://api.pollinations.ai",
+    "https://generate.pollinations.ai",
+    "https://openai.pollinations.ai",
+    "https://image.pollinations.ai",
+    "github.com/pollinations/pollinations"
+  ],
+  "authorization": "ethical red-team audit with permission to reproduce in isolation; no live fire against production",
+  "rules": ["verify in isolated environment only", "no destructive testing", "document all findings for disclosure"]
+}
