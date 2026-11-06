@@ -100,4 +100,4 @@ if (!(hitsAfterEarlyRoute === 0 && hitsAfterLateRoute === 1)) {
     console.error("FAIL: hypothesis not reproduced — refusing to report.");
     process.exit(1);
 }
-console.error("PASS: hypothesis reproduced deterministically.");\n
+console.error("PASS: hypothesis reproduced deterministically.");
