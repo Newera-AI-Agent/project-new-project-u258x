@@ -27,3 +27,4 @@ Durable session memory for this VM job chain. Each line is one step or wind-down
 - [2026-11-06T03:18:00.498Z | VM 4/3] PLAN updated: 6 steps
 - [2026-11-06T03:43:12.339Z | VM 4/3] PLAN updated: 6 steps
 - [2026-11-06T04:06:26.756Z | VM 4/3] PLAN updated: 6 steps
+- [2026-11-06T04:17:05.591Z | VM 4/3] RELAY checkpoint at step 145 — handoff committed, VM 5 continues.

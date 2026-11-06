@@ -1,3 +1,7 @@
+# RELAY HANDOFF — job vm-mw48v2kh-3uhblec1 (VM 4 of 3)
+Written at the 15-minute checkpoint with 14 min left, after 145 steps.
+
+## Original task
 # RELAY HANDOFF — job vm-mw40z057-vlptczcx (VM 3 of 3)
 Written at the 15-minute checkpoint with 13 min left, after 135 steps.
 
@@ -260,6 +264,82 @@ dda74ee cloud status: step 124
 6. [ ] Add runnable PoC scripts + node --test regression tests; make repo build/test green (req local-tests)
 7. [ ] Maintain .newera/vm/WORKLOG.md with every step (req worklog)
 0/7 steps done
+
+## Contract status
+(no task contract on this job)
+
+## Loaded skills (cyber ledger — re-load if your context lost them)
+(no skills loaded)
+
+## What the next VM must do
+1. Check the repo state above — everything committed so far is real and on disk.
+2. Do NOT redo finished work. Verify what exists (build, tests) before touching anything.
+3. Continue the ORIGINAL task to completion, then finish with an honest summary.
+4. If a deploy was requested and the build is green, make sure request_deploy was called (see .newera/vm/deploy-request.json).
+
+## Progress so far
+(no rolling summary was generated — reconstruct state from the git log below and the repo itself)
+
+## Worklog (latest lines — every VM in this chain appended)
+# VM Agent Worklog
+Durable session memory for this VM job chain. Each line is one step or wind-down from one VM. Read it on boot; never delete it.
+- [2026-11-05T13:36:57.955Z | VM 1/3] boot: VM 1/3 online (job vm-mw3la8to-zxar2ffr, 240 min budget)
+- [2026-11-05T13:36:57.956Z | VM 1/3] self-check PASS: shell: VERIFIED (the harness executed bash on this VM at boot); node: v24.22.2; npm: 11.19.1; python3: Python 3.12.3; git: repo checked out @ c81e871; browser: Google Chrome 156.0.8078.79 available — the browser_* tools drive it (playwright-core installs on first browser call); filesystem: WRITABLE 
+- [2026-11-05T14:15:32.311Z | VM 1/3] PLAN updated: 7 steps
+- [2026-11-05T17:15:54.807Z | VM 1/3] RELAY checkpoint at step 490 — handoff committed, VM 2 continues.
+- [2026-11-05T17:16:11.563Z | VM 2/3] boot: VM 2/3 online (job vm-mw3t4djy-2vaycc7v, 240 min budget, relay continuation)
+- [2026-11-05T17:16:11.564Z | VM 2/3] self-check PASS: shell: VERIFIED (the harness executed bash on this VM at boot); node: v24.22.2; npm: 11.19.1; python3: Python 3.12.3; git: repo checked out @ e128fd9; browser: Google Chrome 156.0.8078.79 available — the browser_* tools drive it (playwright-core installs on first browser call); filesystem: WRITABLE 
+- [2026-11-05T17:20:38.519Z | VM 2/3] PLAN updated: 7 steps
+- [2026-11-05T17:33:02.470Z | VM 2/3] PLAN updated: 7 steps
+- [2026-11-05T17:58:38.790Z | VM 2/3] PLAN updated: 7 steps
+- [2026-11-05T18:11:17.300Z | VM 2/3] VERIFIED green: cd /home/runner/work/project-new-project-u258x/project-new-project-u258x/.work/pollinations && echo '=== repo tree (2 levels, no node_modules) ===' && ls -1 && 
+- [2026-11-05T18:17:50.949Z | VM 2/3] PLAN updated: 7 steps
+- [2026-11-05T19:21:41.058Z | VM 2/3] PLAN updated: 7 steps
+- [2026-11-05T20:55:41.397Z | VM 2/3] RELAY checkpoint at step 131 — handoff committed, VM 3 continues.
+- [2026-11-05T20:56:00.045Z | VM 3/3] boot: VM 3/3 online (job vm-mw40z057-vlptczcx, 240 min budget, relay continuation)
+- [2026-11-05T20:56:00.046Z | VM 3/3] self-check PASS: shell: VERIFIED (the harness executed bash on this VM at boot); node: v24.22.2; npm: 11.19.1; python3: Python 3.12.3; git: repo checked out @ e6a47a0; browser: Google Chrome 156.0.8078.79 available — the browser_* tools drive it (playwright-core installs on first browser call); filesystem: WRITABLE 
+- [2026-11-05T20:59:02.580Z | VM 3/3] PLAN updated: 7 steps
+- [2026-11-06T00:36:34.587Z | VM 3/3] RELAY checkpoint at step 135 — handoff committed, VM 4 continues.
+- [2026-11-06T00:36:49.996Z | VM 4/3] boot: VM 4/3 online (job vm-mw48v2kh-3uhblec1, 240 min budget, relay continuation)
+- [2026-11-06T00:36:49.997Z | VM 4/3] self-check PASS: shell: VERIFIED (the harness executed bash on this VM at boot); node: v24.22.2; npm: 11.19.1; python3: Python 3.12.3; git: repo checked out @ 188e451; browser: Google Chrome 156.0.8078.79 available — the browser_* tools drive it (playwright-core installs on first browser call); filesystem: WRITABLE 
+- [2026-11-06T00:38:56.544Z | VM 4/3] PLAN updated: 7 steps
+- [2026-11-06T01:12:32.281Z | VM 4/3] PLAN updated: 8 steps
+- [2026-11-06T01:57:12.964Z | VM 4/3] PLAN updated: 8 steps
+- [2026-11-06T02:18:01.963Z | VM 4/3] PLAN updated: 8 steps
+- [2026-11-06T03:18:00.498Z | VM 4/3] PLAN updated: 6 steps
+- [2026-11-06T03:43:12.339Z | VM 4/3] PLAN updated: 6 steps
+- [2026-11-06T04:06:26.756Z | VM 4/3] PLAN updated: 6 steps
+
+## Repository state
+Changed/added files:
+?? poc/
+
+Recent commits:
+758ce5f cloud status: step 143
+a8fadcb cloud status: step 143
+c752203 cloud status: step 142
+c79bbd9 cloud status: step 142
+081aaae cloud status: step 141
+be6e7d2 cloud status: step 140
+4294219 cloud status: step 139
+6940844 cloud status: step 139
+3875dad cloud status: step 136
+d33dc00 cloud status: step 135
+4b0c3fd cloud status: step 134
+413203e cloud status: step 130
+7487076 cloud status: step 130
+0686501 cloud status: step 129
+9960862 cloud status: step 128
+
+## Current plan (todo state)
+## CURRENT PLAN (6 steps)
+1. [x] Capture verbatim code facts: media wrangler limits, media GET /:id + /:id/metadata handler (req code-verify)
+2. [~] Run bounded read-only production A/B PoC (media protected GET /media vs unprotected GET /: (req poc-verify)  <- NOW
+3. [ ] Build deterministic local Hono PoC (node --test) proving middleware-order bypass: gen /ope (req poc-local)
+4. [ ] Add root package.json + PoC scripts + node --test suite; npm install and make npm test/bui (req local-tests)
+5. [ ] Rewrite issue1.md and issue2.md honestly with verbatim code, real PoC output, accurate sev (req issue-md-files)
+6. [ ] Append every step to .newera/vm/WORKLOG.md and finish with an honest summary (req worklog)
+1/6 steps done
 
 ## Contract status
 (no task contract on this job)
