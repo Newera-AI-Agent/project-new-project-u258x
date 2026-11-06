@@ -1,18 +1,20 @@
 {
-  "name": "pollinations-redteam-pocs",
+  "name": "pollinations-redteam-poc",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Responsible-disclosure PoC harness for the Pollinations rate-limit findings (issue1.md = media.pollinations.ai, issue2.md = gen.pollinations.ai). Read-only and non-destructive by design.",
-  "license": "MIT",
+  "description": "Verified, read-only PoCs for the Pollinations DoS findings reported in issue1.md / issue2.md",
   "scripts": {
     "build": "node scripts/build-check.mjs",
-    "test": "node --test tests/",
-    "poc:hono-order": "node scripts/poc-hono-registration-order.mjs",
-    "poc:gen-ab": "node scripts/poc-gen-ab.mjs",
-    "poc:media-ab": "node scripts/poc-media-ab.mjs"
+    "test": "node --test test/",
+    "poc:media": "node poc/media-ab-poc.mjs",
+    "poc:gen": "node poc/gen-openapi-poc.mjs",
+    "poc:all": "npm run poc:media && npm run poc:gen"
   },
   "devDependencies": {
     "hono": "4.10.6"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
