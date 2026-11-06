@@ -1,0 +1,167 @@
+media-ab-poc start 2026-11-06T06:48:31.481Z
+origin=https://media.pollinations.ai tag=test per-phase=60 concurrency=10
+discovered media id: 78847f03-3723-4c80-9f80-a0bfcb969061
+sleeping 12s so the discovery request leaves the 10s limiter window
+
+=== A: PROTECTED GET /media?tag=... (keyCheckRateLimit) ===
+{
+  "phase": "A: PROTECTED GET /media?tag=... (keyCheckRateLimit)",
+  "method": "GET",
+  "url": "https://media.pollinations.ai/media?tag=test&limit=1",
+  "requests": 60,
+  "elapsedMs": 2953,
+  "statusCounts": {
+    "200": 60
+  },
+  "rateLimited": 0,
+  "servedOk": 60,
+  "bytesServed": 17160,
+  "sampleRetryAfter": null,
+  "sampleCacheControl": null,
+  "sampleCfCacheStatus": null
+}
+
+=== B: UNPROTECTED GET /:id/metadata (no limiter) ===
+{
+  "phase": "B: UNPROTECTED GET /:id/metadata (no limiter)",
+  "method": "GET",
+  "url": "https://media.pollinations.ai/78847f03-3723-4c80-9f80-a0bfcb969061/metadata",
+  "requests": 60,
+  "elapsedMs": 1719,
+  "statusCounts": {
+    "200": 60
+  },
+  "rateLimited": 0,
+  "servedOk": 60,
+  "bytesServed": 8460,
+  "sampleRetryAfter": null,
+  "sampleCacheControl": "no-store",
+  "sampleCfCacheStatus": null
+}
+
+=== C: UNPROTECTED HEAD /:id (no limiter) ===
+{
+  "phase": "C: UNPROTECTED HEAD /:id (no limiter)",
+  "method": "HEAD",
+  "url": "https://media.pollinations.ai/78847f03-3723-4c80-9f80-a0bfcb969061",
+  "requests": 60,
+  "elapsedMs": 2280,
+  "statusCounts": {
+    "200": 60
+  },
+  "rateLimited": 0,
+  "servedOk": 60,
+  "bytesServed": 0,
+  "sampleRetryAfter": null,
+  "sampleCacheControl": "no-store",
+  "sampleCfCacheStatus": null
+}
+
+=== D: UNPROTECTED GET /:id full body (5 requests, no limiter) ===
+{
+  "phase": "D: UNPROTECTED GET /:id full body (5 requests, no limiter)",
+  "method": "GET",
+  "url": "https://media.pollinations.ai/78847f03-3723-4c80-9f80-a0bfcb969061",
+  "requests": 5,
+  "elapsedMs": 495,
+  "statusCounts": {
+    "200": 5
+  },
+  "rateLimited": 0,
+  "servedOk": 5,
+  "bytesServed": 20930190,
+  "sampleRetryAfter": null,
+  "sampleCacheControl": "no-store",
+  "sampleCfCacheStatus": null
+}
+
+=== VERDICT ===
+{
+  "protectedRouteStartedThrottling": false,
+  "protectedRoute429": 0,
+  "unprotectedMetadata429": 0,
+  "unprotectedHead429": 0,
+  "unprotectedServedWhileProtectedThrottled": false,
+  "conclusion": "NOT CONFIRMED on this run - see raw phase data before drawing conclusions."
+}
+
+full JSON:
+{
+  "startedAt": "2026-11-06T06:48:43.895Z",
+  "origin": "https://media.pollinations.ai",
+  "mediaId": "78847f03-3723-4c80-9f80-a0bfcb969061",
+  "phases": [
+    {
+      "phase": "A: PROTECTED GET /media?tag=... (keyCheckRateLimit)",
+      "method": "GET",
+      "url": "https://media.pollinations.ai/media?tag=test&limit=1",
+      "requests": 60,
+      "elapsedMs": 2953,
+      "statusCounts": {
+        "200": 60
+      },
+      "rateLimited": 0,
+      "servedOk": 60,
+      "bytesServed": 17160,
+      "sampleRetryAfter": null,
+      "sampleCacheControl": null,
+      "sampleCfCacheStatus": null
+    },
+    {
+      "phase": "B: UNPROTECTED GET /:id/metadata (no limiter)",
+      "method": "GET",
+      "url": "https://media.pollinations.ai/78847f03-3723-4c80-9f80-a0bfcb969061/metadata",
+      "requests": 60,
+      "elapsedMs": 1719,
+      "statusCounts": {
+        "200": 60
+      },
+      "rateLimited": 0,
+      "servedOk": 60,
+      "bytesServed": 8460,
+      "sampleRetryAfter": null,
+      "sampleCacheControl": "no-store",
+      "sampleCfCacheStatus": null
+    },
+    {
+      "phase": "C: UNPROTECTED HEAD /:id (no limiter)",
+      "method": "HEAD",
+      "url": "https://media.pollinations.ai/78847f03-3723-4c80-9f80-a0bfcb969061",
+      "requests": 60,
+      "elapsedMs": 2280,
+      "statusCounts": {
+        "200": 60
+      },
+      "rateLimited": 0,
+      "servedOk": 60,
+      "bytesServed": 0,
+      "sampleRetryAfter": null,
+      "sampleCacheControl": "no-store",
+      "sampleCfCacheStatus": null
+    },
+    {
+      "phase": "D: UNPROTECTED GET /:id full body (5 requests, no limiter)",
+      "method": "GET",
+      "url": "https://media.pollinations.ai/78847f03-3723-4c80-9f80-a0bfcb969061",
+      "requests": 5,
+      "elapsedMs": 495,
+      "statusCounts": {
+        "200": 5
+      },
+      "rateLimited": 0,
+      "servedOk": 5,
+      "bytesServed": 20930190,
+      "sampleRetryAfter": null,
+      "sampleCacheControl": "no-store",
+      "sampleCfCacheStatus": null
+    }
+  ],
+  "verdict": {
+    "protectedRouteStartedThrottling": false,
+    "protectedRoute429": 0,
+    "unprotectedMetadata429": 0,
+    "unprotectedHead429": 0,
+    "unprotectedServedWhileProtectedThrottled": false,
+    "conclusion": "NOT CONFIRMED on this run - see raw phase data before drawing conclusions."
+  }
+}
