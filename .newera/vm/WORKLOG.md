@@ -61,3 +61,4 @@ Durable session memory for this VM job chain. Each line is one step or wind-down
 - [2026-11-06T15:29:43.277Z | VM 8/3] PLAN updated: 7 steps
 - [2026-11-06T16:29:30.201Z | VM 8/3] PLAN updated: 8 steps
 - [2026-11-06T17:38:21.936Z | VM 8/3] PLAN updated: 8 steps
+- [2026-11-06T19:05:36.987Z | VM 8/3] ABORT (model endpoint failure) at step 67 — handoff written for resume.

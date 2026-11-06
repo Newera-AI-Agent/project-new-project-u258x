@@ -1,3 +1,3 @@
 # VM Agent Result
 
-RELAYED to a fresh VM (relay 7 of 2) after 113 steps. All work is committed; the handoff brief is .newera/vm/handoff.md.
+ABORTED: model endpoint failure — The model endpoint failed after 5 attempts (with backoff): The operation was aborted due to timeout (control plane: https://newera.namansoni.in). The work that landed is committed and a handoff was written — resume continues from it.
