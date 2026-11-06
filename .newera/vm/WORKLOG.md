@@ -34,3 +34,4 @@ Durable session memory for this VM job chain. Each line is one step or wind-down
 - [2026-11-06T04:20:09.860Z | VM 5/3] VERIFIED green: cd /home/runner/work/project-new-project-u258x/project-new-project-u258x && echo '=== npm test (expect fail) ===' && (npm test 2>&1 | tail -5) ; echo '=== npm r
 - [2026-11-06T04:20:51.476Z | VM 5/3] PLAN updated: 6 steps
 - [2026-11-06T04:35:21.461Z | VM 5/3] PLAN updated: 6 steps
+- [2026-11-06T08:02:15.939Z | VM 5/3] RELAY checkpoint at step 114 — handoff committed, VM 6 continues.
