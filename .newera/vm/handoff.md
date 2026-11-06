@@ -1,3 +1,7 @@
+# RELAY HANDOFF — job vm-mw4wnc07-qwaeojau (VM 7 of 3)
+Written at the 15-minute checkpoint with 11 min left, after 113 steps.
+
+## Original task
 # RELAY HANDOFF — job vm-mw4os8tx-ifnfjzau (VM 6 of 3)
 Written at the 15-minute checkpoint with 14 min left, after 160 steps.
 
@@ -376,22 +380,12 @@ Durable session memory for this VM job chain. Each line is one step or wind-down
 - [2026-11-05T17:20:38.519Z | VM 2/3] PLAN updated: 7 steps
 - [2026-11-05T17:33:02.470Z | VM 2/3] PLAN updated: 7 steps
 - [2026-11-05T17:58:38.790Z | VM 2/3] PLAN updated: 7 steps
-- [2026-11-05T18:11:17.300Z | VM 2/3] VERIFIED green: cd /home/runner/work/project-new-project-u258x/project-new-project-u258x/.work/pollinations && echo '=== repo tree (2 levels, no node_modules) ===
+- [2026-11-05T18:11:17.300Z | VM 2/3] VERIFIED green: cd
 
 ## Progress so far
 (no rolling summary was generated — reconstruct state from the git log below and the repo itself)
 
 ## Worklog (latest lines — every VM in this chain appended)
-- [2026-11-05T17:15:54.807Z | VM 1/3] RELAY checkpoint at step 490 — handoff committed, VM 2 continues.
-- [2026-11-05T17:16:11.563Z | VM 2/3] boot: VM 2/3 online (job vm-mw3t4djy-2vaycc7v, 240 min budget, relay continuation)
-- [2026-11-05T17:16:11.564Z | VM 2/3] self-check PASS: shell: VERIFIED (the harness executed bash on this VM at boot); node: v24.22.2; npm: 11.19.1; python3: Python 3.12.3; git: repo checked out @ e128fd9; browser: Google Chrome 156.0.8078.79 available — the browser_* tools drive it (playwright-core installs on first browser call); filesystem: WRITABLE 
-- [2026-11-05T17:20:38.519Z | VM 2/3] PLAN updated: 7 steps
-- [2026-11-05T17:33:02.470Z | VM 2/3] PLAN updated: 7 steps
-- [2026-11-05T17:58:38.790Z | VM 2/3] PLAN updated: 7 steps
-- [2026-11-05T18:11:17.300Z | VM 2/3] VERIFIED green: cd /home/runner/work/project-new-project-u258x/project-new-project-u258x/.work/pollinations && echo '=== repo tree (2 levels, no node_modules) ===' && ls -1 && 
-- [2026-11-05T18:17:50.949Z | VM 2/3] PLAN updated: 7 steps
-- [2026-11-05T19:21:41.058Z | VM 2/3] PLAN updated: 7 steps
-- [2026-11-05T20:55:41.397Z | VM 2/3] RELAY checkpoint at step 131 — handoff committed, VM 3 continues.
 - [2026-11-05T20:56:00.045Z | VM 3/3] boot: VM 3/3 online (job vm-mw40z057-vlptczcx, 240 min budget, relay continuation)
 - [2026-11-05T20:56:00.046Z | VM 3/3] self-check PASS: shell: VERIFIED (the harness executed bash on this VM at boot); node: v24.22.2; npm: 11.19.1; python3: Python 3.12.3; git: repo checked out @ e6a47a0; browser: Google Chrome 156.0.8078.79 available — the browser_* tools drive it (playwright-core installs on first browser call); filesystem: WRITABLE 
 - [2026-11-05T20:59:02.580Z | VM 3/3] PLAN updated: 7 steps
@@ -422,38 +416,48 @@ Durable session memory for this VM job chain. Each line is one step or wind-down
 - [2026-11-06T09:14:49.916Z | VM 6/3] PLAN updated: 6 steps
 - [2026-11-06T09:18:56.547Z | VM 6/3] PLAN updated: 6 steps
 - [2026-11-06T10:37:28.462Z | VM 6/3] PLAN updated: 7 steps
+- [2026-11-06T11:42:24.397Z | VM 6/3] RELAY checkpoint at step 160 — handoff committed, VM 7 continues.
+- [2026-11-06T11:42:48.108Z | VM 7/3] boot: VM 7/3 online (job vm-mw4wnc07-qwaeojau, 240 min budget, relay continuation)
+- [2026-11-06T11:42:48.109Z | VM 7/3] self-check PASS: shell: VERIFIED (the harness executed bash on this VM at boot); node: v24.22.2; npm: 11.19.1; python3: Python 3.12.3; git: repo checked out @ 7850ff7; browser: Google Chrome 156.0.8078.79 available — the browser_* tools drive it (playwright-core installs on first browser call); filesystem: WRITABLE 
+- [2026-11-06T11:42:49.272Z | VM 7/3] boot auto-setup: npm install --no-audit --no-fund ok
+- [2026-11-06T11:44:14.620Z | VM 7/3] PLAN updated: 7 steps
+- [2026-11-06T12:17:28.864Z | VM 7/3] PLAN updated: 7 steps
+- [2026-11-06T13:16:48.806Z | VM 7/3] PLAN updated: 7 steps
+- [2026-11-06T13:46:23.823Z | VM 7/3] PLAN updated: 7 steps
+- [2026-11-06T14:32:24.972Z | VM 7/3] PLAN updated: 7 steps
+- [2026-11-06T15:11:12.776Z | VM 7/3] PLAN updated: 7 steps
 
 ## Repository state
 Changed/added files:
-(clean tree)
+ M poc/gen-ab-poc.mjs
 
 Recent commits:
-b639af0 cloud status: step 157
-ea8b066 cloud status: step 157
-fbac8a9 cloud status: step 155
-226146b cloud status: step 154
-7c49510 cloud status: step 153
-ca3b971 cloud status: step 153
-c5c7505 cloud status: step 153
-a134ed6 cloud status: step 152
-d6ad15f cloud status: step 148
-1b02517 cloud status: step 146
-bffdcfb cloud status: step 144
-4fc5d0f cloud status: step 143
-d75e713 cloud status: step 142
-5e48fba cloud status: step 141
-6e35ef6 cloud status: step 141
+a771fb5 cloud status: step 112
+ae3695a cloud status: step 112
+cef22f3 cloud status: step 112
+9c2a6f8 cloud status: step 111
+d4c1595 cloud status: step 108
+25917c2 cloud status: step 108
+2de2277 cloud status: step 106
+9b3cf5c cloud status: step 106
+478ca16 cloud status: step 106
+6706eb6 cloud status: step 106
+c5933fb cloud status: step 104
+f40b101 cloud status: step 104
+61c5016 cloud status: step 103
+a098789 cloud status: step 103
+bd2a807 cloud status: step 102
 
 ## Current plan (todo state)
 ## CURRENT PLAN (7 steps)
-1. [x] Capture verbatim upstream code facts (media GET /:id + /:id/metadata unguarded; gen proxyR (req code-verify)
-2. [x] Bounded read-only production A/B PoC: media protected GET /media (429s) vs unprotected GET (req poc-verify)
-3. [~] Deterministic local Hono registration-order PoC proving later-mounted router limiter is sk (req poc-local)  <- NOW
-4. [ ] Bounded production A/B on gen.pollinations.ai: /models/status (early-mounted, no edge limi (req poc-gen)
-5. [ ] Create scripts/build-check.mjs, test/ node --test suite, poc/gen-openapi-poc.mjs; npm inst (req local-tests)
-6. [ ] Rewrite issue1.md and issue2.md with verbatim upstream code, real PoC output, honest sever (req issue-md-files)
-7. [ ] Append every step to .newera/vm/WORKLOG.md and finish with honest summary (req worklog)
-2/7 steps done
+1. [~] Capture verbatim upstream code facts at HEAD (media GET /:id + /:id/metadata unguarded; ge (req code-verify)  <- NOW
+2. [ ] Production A/B PoC on media.pollinations.ai (H2 single-colo): protected GET /media 429 vs  (req poc-verify)
+3. [ ] Deterministic local Hono registration-order PoC (later-mounted router limiter skipped for  (req poc-local)
+4. [ ] Bounded production A/B on gen.pollinations.ai: control /3d/models (behind limiter) vs pre- (req poc-gen)
+5. [ ] Create scripts/build-check.mjs + test/ node --test suite + poc/gen-ab-poc.mjs; npm install (req local-tests)
+6. [ ] Rewrite issue1.md and issue2.md: verbatim HEAD code, real PoC output, honest severity, rem (req issue-md-files)
+7. [ ] Append every step to .newera/vm/WORKLOG.md and finish with an honest summary (req worklog)
+0/7 steps done
 
 ## Contract status
 (no task contract on this job)
