@@ -1,0 +1,82 @@
+# Verbatim upstream snippets — gen.pollinations.ai (upstream HEAD 6652d7277609f822ec22e686326c00622c61c8cc)
+
+## index.ts: app-level .use() calls + route mount order (lines 258-318)
+258:     .all("/api/docs", redirectLegacyDocs)
+259:     .all("/api/docs/", redirectLegacyDocs)
+260:     .all("/api/docs/*", redirectLegacyDocs)
+261:     .all("/api", () => notFound())
+262:     .all("/api/*", () => notFound())
+263:     // Account calls reach Enter's D1, so they share gen's edge limit: one IP
+264:     // rotating made-up keys cannot turn into one D1 lookup per request.
+265:     // Hono's "/account/*" also matches "/account".
+266:     .use("/account/*", edgeRateLimit)
+267:     .all("/account", (c) => fetchEnter(c, new URL(c.req.url)))
+268:     .all("/account/", (c) => fetchEnter(c, new URL(c.req.url)))
+269:     .all("/account/*", (c) => {
+270:         const url = new URL(c.req.url);
+271:         url.pathname = `/api${stripTrailingSlash(url.pathname)}`;
+272:         return fetchEnter(c, url);
+273:     })
+274:     // The read-only quest catalog. Per-account quest rewards live under
+275:     // /account/quests.
+276:     .all("/quests/catalog", (c) => {
+277:         if (c.req.method !== "GET" && c.req.method !== "HEAD") {
+278:             return notFound();
+279:         }
+280:         const url = new URL(c.req.url);
+281:         url.pathname = `/api${stripTrailingSlash(url.pathname)}`;
+282:         return fetchEnter(c, url);
+283:     })
+284:     // Generation routes: docs, models, and media/text/audio/video APIs live at
+285:     // the public gen origin without an internal /api prefix.
+286:     .use("*", async (c, next) => {
+287:         await next();
+288:         if (!isDocsPath(c.req.path)) {
+289:             c.header("X-Robots-Tag", "noindex, nofollow");
+290:         }
+291:     })
+292:     .route("/docs", createDocsRoutes(app))
+293:     .route("/v1/audio", audioRoutes)
+294:     .route("/", stemSeparationRoutes)
+295:     .route("/", mcpRoutes)
+296:     // SEP-2127 Server Cards stay public: mcpRoutes' auth middleware matches
+297:     // only the exact /mcp/:serverId path, while its /mcp/* edge rate limit
+298:     // still runs first because the cards are mounted after it.
+299:     .route("/", mcpCardRoutes)
+300:     .route(E2B_PATH, e2bRoutes)
+301:     // Conventional, discoverable alias for the merged OpenAPI spec. JSON-only;
+302:     // the ?format=yaml passthrough stays on /docs/open-api/generate-schema.
+303:     // Must be registered before the "/" proxy catch-all or it gets shadowed.
+304:     .get("/openapi.json", async (c) => {
+305:         const merged = await buildMergedOpenApiSpec(c, app);
+306:         return c.json(merged);
+307:     })
+308:     .route("/", jobRoutes)
+309:     .route("/", modelStatusRoutes)
+310:     .route("/", modelStatsRoutes)
+311:     .route(
+312:         "/",
+313:         createMessagesRoutes((request, c) =>
+314:             app.fetch(request, c.env, c.executionCtx),
+315:         ),
+316:     )
+317:     .route("/", proxyRoutes);
+318: 
+
+## routes/proxy.ts: proxyRoutes definition + limiter (lines 431-446)
+431: export const proxyRoutes = new Hono<Env>()
+432:     // Edge rate limiter: first line of defense (10 req/s per IP)
+433:     .use("*", edgeRateLimit)
+434:     // Optional auth for models endpoints - doesn't require auth but uses it if provided
+435:     .use("/v1/models", auth())
+436:     // Canonical IDs contain slashes (`openai/gpt-5-nano`), so match the rest
+437:     // of the path instead of one segment.
+438:     .use("/v1/models/:model{.+}", auth())
+439:     .use("/image/models", auth())
+440:     .use("/3d/models", auth())
+441:     .use("/video/models", auth())
+442:     .use("/text/models", auth())
+443:     .use("/audio/models", auth())
+444:     .use("/embeddings/models", auth())
+445:     .use("/models", auth())
+446:     .get(
