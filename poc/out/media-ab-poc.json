@@ -3,3 +3,86 @@ origin=https://media.pollinations.ai id=78847f03-3723-4c80-9f80-a0bfcb969061 per
 protected   : GET https://media.pollinations.ai/media?tag=test&limit=1   (keyCheckRateLimit -> EDGE_RATE_LIMITER 50/10s)
 unprotected : GET https://media.pollinations.ai/78847f03-3723-4c80-9f80-a0bfcb969061/metadata (no limiter middleware)
 sleeping 12s so the discovery request leaves the 10s limiter window
+
+=== PROTECTED ===
+{
+  "route": "GET /media?tag=... (keyCheckRateLimit)",
+  "url": "https://media.pollinations.ai/media?tag=test&limit=1",
+  "requests": 120,
+  "statusCounts": {
+    "200": 120
+  },
+  "rateLimited": 0,
+  "servedOk": 120,
+  "bytesServed": 34320,
+  "sampleRetryAfter": null,
+  "sampleCacheControl": null,
+  "sampleCfCacheStatus": null
+}
+
+=== UNPROTECTED ===
+{
+  "route": "GET /:id/metadata (no limiter middleware)",
+  "url": "https://media.pollinations.ai/78847f03-3723-4c80-9f80-a0bfcb969061/metadata",
+  "requests": 120,
+  "statusCounts": {
+    "200": 120
+  },
+  "rateLimited": 0,
+  "servedOk": 120,
+  "bytesServed": 16920,
+  "sampleRetryAfter": null,
+  "sampleCacheControl": "no-store",
+  "sampleCfCacheStatus": null
+}
+
+=== VERDICT ===
+{
+  "protected429": 0,
+  "unprotected429": 0,
+  "unprotectedServedWhileProtectedThrottled": false,
+  "conclusion": "NOT CONFIRMED (limiter never fired): the protected route served every request with no 429 either - the declared 50/10s limit was not enforced during this burst."
+}
+
+full JSON:
+{
+  "startedAt": "2026-11-06T07:19:39.976Z",
+  "finishedAt": "2026-11-06T07:20:24.073Z",
+  "origin": "https://media.pollinations.ai",
+  "mediaId": "78847f03-3723-4c80-9f80-a0bfcb969061",
+  "ratePerSecond": 10,
+  "protected": {
+    "route": "GET /media?tag=... (keyCheckRateLimit)",
+    "url": "https://media.pollinations.ai/media?tag=test&limit=1",
+    "requests": 120,
+    "statusCounts": {
+      "200": 120
+    },
+    "rateLimited": 0,
+    "servedOk": 120,
+    "bytesServed": 34320,
+    "sampleRetryAfter": null,
+    "sampleCacheControl": null,
+    "sampleCfCacheStatus": null
+  },
+  "unprotected": {
+    "route": "GET /:id/metadata (no limiter middleware)",
+    "url": "https://media.pollinations.ai/78847f03-3723-4c80-9f80-a0bfcb969061/metadata",
+    "requests": 120,
+    "statusCounts": {
+      "200": 120
+    },
+    "rateLimited": 0,
+    "servedOk": 120,
+    "bytesServed": 16920,
+    "sampleRetryAfter": null,
+    "sampleCacheControl": "no-store",
+    "sampleCfCacheStatus": null
+  },
+  "verdict": {
+    "protected429": 0,
+    "unprotected429": 0,
+    "unprotectedServedWhileProtectedThrottled": false,
+    "conclusion": "NOT CONFIRMED (limiter never fired): the protected route served every request with no 429 either - the declared 50/10s limit was not enforced during this burst."
+  }
+}
