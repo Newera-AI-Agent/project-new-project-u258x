@@ -1,3 +1,7 @@
+# RELAY HANDOFF — job vm-mw4os8tx-ifnfjzau (VM 6 of 3)
+Written at the 15-minute checkpoint with 14 min left, after 160 steps.
+
+## Original task
 # RELAY HANDOFF — job vm-mw4gqo1f-ahxrozau (VM 5 of 3)
 Written at the 15-minute checkpoint with 9 min left, after 114 steps.
 
@@ -372,6 +376,18 @@ Durable session memory for this VM job chain. Each line is one step or wind-down
 - [2026-11-05T17:20:38.519Z | VM 2/3] PLAN updated: 7 steps
 - [2026-11-05T17:33:02.470Z | VM 2/3] PLAN updated: 7 steps
 - [2026-11-05T17:58:38.790Z | VM 2/3] PLAN updated: 7 steps
+- [2026-11-05T18:11:17.300Z | VM 2/3] VERIFIED green: cd /home/runner/work/project-new-project-u258x/project-new-project-u258x/.work/pollinations && echo '=== repo tree (2 levels, no node_modules) ===
+
+## Progress so far
+(no rolling summary was generated — reconstruct state from the git log below and the repo itself)
+
+## Worklog (latest lines — every VM in this chain appended)
+- [2026-11-05T17:15:54.807Z | VM 1/3] RELAY checkpoint at step 490 — handoff committed, VM 2 continues.
+- [2026-11-05T17:16:11.563Z | VM 2/3] boot: VM 2/3 online (job vm-mw3t4djy-2vaycc7v, 240 min budget, relay continuation)
+- [2026-11-05T17:16:11.564Z | VM 2/3] self-check PASS: shell: VERIFIED (the harness executed bash on this VM at boot); node: v24.22.2; npm: 11.19.1; python3: Python 3.12.3; git: repo checked out @ e128fd9; browser: Google Chrome 156.0.8078.79 available — the browser_* tools drive it (playwright-core installs on first browser call); filesystem: WRITABLE 
+- [2026-11-05T17:20:38.519Z | VM 2/3] PLAN updated: 7 steps
+- [2026-11-05T17:33:02.470Z | VM 2/3] PLAN updated: 7 steps
+- [2026-11-05T17:58:38.790Z | VM 2/3] PLAN updated: 7 steps
 - [2026-11-05T18:11:17.300Z | VM 2/3] VERIFIED green: cd /home/runner/work/project-new-project-u258x/project-new-project-u258x/.work/pollinations && echo '=== repo tree (2 levels, no node_modules) ===' && ls -1 && 
 - [2026-11-05T18:17:50.949Z | VM 2/3] PLAN updated: 7 steps
 - [2026-11-05T19:21:41.058Z | VM 2/3] PLAN updated: 7 steps
@@ -396,37 +412,48 @@ Durable session memory for this VM job chain. Each line is one step or wind-down
 - [2026-11-06T04:20:09.860Z | VM 5/3] VERIFIED green: cd /home/runner/work/project-new-project-u258x/project-new-project-u258x && echo '=== npm test (expect fail) ===' && (npm test 2>&1 | tail -5) ; echo '=== npm r
 - [2026-11-06T04:20:51.476Z | VM 5/3] PLAN updated: 6 steps
 - [2026-11-06T04:35:21.461Z | VM 5/3] PLAN updated: 6 steps
+- [2026-11-06T08:02:15.939Z | VM 5/3] RELAY checkpoint at step 114 — handoff committed, VM 6 continues.
+- [2026-11-06T08:02:39.824Z | VM 6/3] boot: VM 6/3 online (job vm-mw4os8tx-ifnfjzau, 240 min budget, relay continuation)
+- [2026-11-06T08:02:39.825Z | VM 6/3] self-check PASS: shell: VERIFIED (the harness executed bash on this VM at boot); node: v24.22.2; npm: 11.19.1; python3: Python 3.12.3; git: repo checked out @ 2fb83ce; browser: Google Chrome 156.0.8078.79 available — the browser_* tools drive it (playwright-core installs on first browser call); filesystem: WRITABLE 
+- [2026-11-06T08:02:42.576Z | VM 6/3] boot auto-setup: npm install --no-audit --no-fund ok
+- [2026-11-06T08:08:00.497Z | VM 6/3] PLAN updated: 6 steps
+- [2026-11-06T08:20:42.823Z | VM 6/3] PLAN updated: 6 steps
+- [2026-11-06T08:37:36.502Z | VM 6/3] PLAN updated: 6 steps
+- [2026-11-06T09:14:49.916Z | VM 6/3] PLAN updated: 6 steps
+- [2026-11-06T09:18:56.547Z | VM 6/3] PLAN updated: 6 steps
+- [2026-11-06T10:37:28.462Z | VM 6/3] PLAN updated: 7 steps
 
 ## Repository state
 Changed/added files:
 (clean tree)
 
 Recent commits:
-e01e688 cloud status: step 113
-35b15cf cloud status: step 113
-73f8f32 cloud status: step 113
-120d98a cloud status: step 113
-81c2a13 cloud status: step 112
-2c4dc77 cloud status: step 112
-e9a780c cloud status: step 111
-3955b63 cloud status: step 111
-878b7fe cloud status: step 110
-07dba3c cloud status: step 109
-db70311 cloud status: step 108
-0303f13 cloud status: step 107
-d8a31cb cloud status: step 106
-479e7dd cloud status: step 105
-8f322c2 cloud status: step 104
+b639af0 cloud status: step 157
+ea8b066 cloud status: step 157
+fbac8a9 cloud status: step 155
+226146b cloud status: step 154
+7c49510 cloud status: step 153
+ca3b971 cloud status: step 153
+c5c7505 cloud status: step 153
+a134ed6 cloud status: step 152
+d6ad15f cloud status: step 148
+1b02517 cloud status: step 146
+bffdcfb cloud status: step 144
+4fc5d0f cloud status: step 143
+d75e713 cloud status: step 142
+5e48fba cloud status: step 141
+6e35ef6 cloud status: step 141
 
 ## Current plan (todo state)
-## CURRENT PLAN (6 steps)
-1. [~] Verify gen.pollinations.ai rate-limit placement verbatim at upstream HEAD 7aca32b (index.t (req code-verify)  <- NOW
-2. [ ] Run bounded read-only production A/B PoC on media.pollinations.ai (protected GET /media vs (req poc-verify)
-3. [ ] Run deterministic local Hono registration-order PoC (scripts/poc-hono-registration-order.m (req poc-local)
-4. [ ] Create missing scripts/build-check.mjs, test/ node --test suite and poc/gen-openapi-poc.mj (req local-tests)
-5. [ ] Rewrite issue1.md and issue2.md with verbatim upstream code, real PoC output, accurate sev (req issue-md-files)
-6. [ ] Append every step to .newera/vm/WORKLOG.md and finish with an honest summary (req worklog)
-0/6 steps done
+## CURRENT PLAN (7 steps)
+1. [x] Capture verbatim upstream code facts (media GET /:id + /:id/metadata unguarded; gen proxyR (req code-verify)
+2. [x] Bounded read-only production A/B PoC: media protected GET /media (429s) vs unprotected GET (req poc-verify)
+3. [~] Deterministic local Hono registration-order PoC proving later-mounted router limiter is sk (req poc-local)  <- NOW
+4. [ ] Bounded production A/B on gen.pollinations.ai: /models/status (early-mounted, no edge limi (req poc-gen)
+5. [ ] Create scripts/build-check.mjs, test/ node --test suite, poc/gen-openapi-poc.mjs; npm inst (req local-tests)
+6. [ ] Rewrite issue1.md and issue2.md with verbatim upstream code, real PoC output, honest sever (req issue-md-files)
+7. [ ] Append every step to .newera/vm/WORKLOG.md and finish with honest summary (req worklog)
+2/7 steps done
 
 ## Contract status
 (no task contract on this job)
