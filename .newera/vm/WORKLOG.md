@@ -59,3 +59,4 @@ Durable session memory for this VM job chain. Each line is one step or wind-down
 - [2026-11-06T15:26:30.308Z | VM 8/3] self-check PASS: shell: VERIFIED (the harness executed bash on this VM at boot); node: v24.22.2; npm: 11.19.1; python3: Python 3.12.3; git: repo checked out @ e29fd7a; browser: Google Chrome 156.0.8078.79 available — the browser_* tools drive it (playwright-core installs on first browser call); filesystem: WRITABLE 
 - [2026-11-06T15:26:31.430Z | VM 8/3] boot auto-setup: npm install --no-audit --no-fund ok
 - [2026-11-06T15:29:43.277Z | VM 8/3] PLAN updated: 7 steps
+- [2026-11-06T16:29:30.201Z | VM 8/3] PLAN updated: 8 steps
