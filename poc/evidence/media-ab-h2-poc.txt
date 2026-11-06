@@ -1,0 +1,57 @@
+{
+  "startedAt": "2026-11-06T10:04:31.189Z",
+  "origin": "https://media.pollinations.ai",
+  "mediaId": "78847f03-3723-4c80-9f80-a0bfcb969061",
+  "note": "read-only; plain GETs; no writes, uploads or deletions",
+  "phases": [
+    {
+      "phase": "A: PROTECTED GET /media (keyCheckRateLimit, 50/10s)",
+      "method": "GET",
+      "url": "https://media.pollinations.ai/media?tag=test&limit=1",
+      "connection": "single HTTP/2 session (1 colo, 1 counter)",
+      "requests": 80,
+      "elapsedMs": 823,
+      "statusCounts": {
+        "200": 64,
+        "429": 16
+      },
+      "servedOk": 64,
+      "rateLimited": 16,
+      "first429AtRequest": 1,
+      "sampleRetryAfter": "10",
+      "bytesServed": 18880,
+      "coloCounts": {
+        "ORD": 80
+      }
+    },
+    {
+      "phase": "B: UNPROTECTED GET /:id/metadata (no limiter)",
+      "method": "GET",
+      "url": "https://media.pollinations.ai/78847f03-3723-4c80-9f80-a0bfcb969061/metadata",
+      "connection": "single HTTP/2 session (1 colo, 1 counter)",
+      "requests": 80,
+      "elapsedMs": 433,
+      "statusCounts": {
+        "200": 80
+      },
+      "servedOk": 80,
+      "rateLimited": 0,
+      "first429AtRequest": null,
+      "sampleRetryAfter": null,
+      "bytesServed": 11280,
+      "coloCounts": {
+        "ORD": 80
+      }
+    }
+  ],
+  "verdict": {
+    "protected429": 16,
+    "protectedServedOk": 64,
+    "unprotected429": 0,
+    "unprotectedServedOk": 80,
+    "sameColoPhaseA": true,
+    "sameColoPhaseB": true,
+    "conclusion": "CONFIRMED: the limited route returned 429 once >50 requests/10s hit one colo from one IP, while the route without limiter middleware kept answering 200 for the same client IP and the same request volume."
+  },
+  "finishedAt": "2026-11-06T10:04:44.562Z"
+}
